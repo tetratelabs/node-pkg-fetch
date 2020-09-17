@@ -11,6 +11,9 @@
   "v12.18.1": [
     "node.v12.18.1.cpp.patch"
   ],
+  "v12.18.14": [
+    "node.v12.18.14.cpp.patch"
+  ],
   "v12.16.1": [
     "node.v12.16.1.cpp.patch"
   ],
