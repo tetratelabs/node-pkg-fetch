@@ -17,13 +17,13 @@
     * Initializes V8. This function needs to be called before the first Isolate
 --- node/deps/v8/src/api/api.cc
 +++ node/deps/v8/src/api/api.cc
-@@ -913,10 +913,36 @@
+@@ -913,10 +913,38 @@
  
  void V8::SetFlagsFromCommandLine(int* argc, char** argv, bool remove_flags) {
    i::FlagList::SetFlagsFromCommandLine(argc, argv, remove_flags);
  }
-
-+ 
+ 
++
 +bool save_lazy;
 +bool save_predictable;
 +
@@ -301,7 +301,7 @@ new file mode 100644
        produceCachedData = false,
        importModuleDynamically,
        [kParsingContext]: parsingContext,
-+      sourceless = false
++      sourceless = false,
      } = options;
  
      validateString(filename, 'options.filename');
@@ -596,7 +596,7 @@ new file mode 100644
 +  }
 +  return adjacent(c, nargv);
 +}
-\ No newline at end of file
++
 --- node/src/node_options.cc
 +++ node/src/node_options.cc
 @@ -236,10 +236,11 @@
