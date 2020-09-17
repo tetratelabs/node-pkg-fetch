@@ -50,6 +50,7 @@
 +  script->set_source(i::ReadOnlyRoots(isolate).undefined_value());
 +}
 +
++
  RegisteredExtension* RegisteredExtension::first_extension_ = nullptr;
  
  RegisteredExtension::RegisteredExtension(std::unique_ptr<Extension> extension)
